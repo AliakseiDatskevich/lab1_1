@@ -42,14 +42,57 @@ public class OfferItem {
 
 	private BigDecimal discount;
 
-	public OfferItem(String productId, BigDecimal productPrice, String productName,
-			Date productSnapshotDate, String productType, int quantity) {
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+
+	public void setProductPrice(BigDecimal productPrice) {
+		this.productPrice = productPrice;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public void setProductSnapshotDate(Date productSnapshotDate) {
+		this.productSnapshotDate = productSnapshotDate;
+	}
+
+	public void setProductType(String productType) {
+		this.productType = productType;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public void setTotalCost(BigDecimal totalCost) {
+		this.totalCost = totalCost;
+	}
+
+	public void setDiscountCause(String discountCause) {
+		this.discountCause = discountCause;
+	}
+
+	public void setDiscount(BigDecimal discount) {
+		this.discount = discount;
+	}
+
+	public OfferItem(String productId, BigDecimal productPrice, String productName, Date productSnapshotDate,
+			String productType, int quantity) {
 		this(productId, productPrice, productName, productSnapshotDate, productType, quantity, null, null);
 	}
 
-	public OfferItem(String productId, BigDecimal productPrice, String productName,
-			Date productSnapshotDate, String productType, int quantity,
-			BigDecimal discount, String discountCause) {
+	public OfferItem(String productId, BigDecimal productPrice, String productName, Date productSnapshotDate,
+			String productType, int quantity, BigDecimal discount, String discountCause) {
 		this.productId = productId;
 		this.productPrice = productPrice;
 		this.productName = productName;
@@ -64,26 +107,25 @@ public class OfferItem {
 		if (discount != null)
 			discountValue = discountValue.subtract(discount);
 
-		this.totalCost = productPrice
-				.multiply(new BigDecimal(quantity)).subtract(discountValue);
+		this.totalCost = productPrice.multiply(new BigDecimal(quantity)).subtract(discountValue);
 	}
 
 	public String getProductId() {
 		return productId;
 	}
-	
+
 	public BigDecimal getProductPrice() {
 		return productPrice;
 	}
-	
+
 	public String getProductName() {
 		return productName;
 	}
-	
+
 	public Date getProductSnapshotDate() {
 		return productSnapshotDate;
 	}
-	
+
 	public String getProductType() {
 		return productType;
 	}
@@ -112,16 +154,13 @@ public class OfferItem {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((discount == null) ? 0 : discount.hashCode());
+		result = prime * result + ((discount == null) ? 0 : discount.hashCode());
 		result = prime * result + ((productName == null) ? 0 : productName.hashCode());
 		result = prime * result + ((productPrice == null) ? 0 : productPrice.hashCode());
-		result = prime * result
-				+ ((productId == null) ? 0 : productId.hashCode());
+		result = prime * result + ((productId == null) ? 0 : productId.hashCode());
 		result = prime * result + ((productType == null) ? 0 : productType.hashCode());
 		result = prime * result + quantity;
-		result = prime * result
-				+ ((totalCost == null) ? 0 : totalCost.hashCode());
+		result = prime * result + ((totalCost == null) ? 0 : totalCost.hashCode());
 		return result;
 	}
 
