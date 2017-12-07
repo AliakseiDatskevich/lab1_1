@@ -13,6 +13,10 @@ public class Offer {
 		this.unavailableItems = unavailableItems;
 	}
 
+	public Offer() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public List<OfferItem> getAvailabeItems() {
 		return availabeItems;
 	}
@@ -68,12 +72,21 @@ public class Offer {
 		return true;
 	}
 
+	public void setUnavailableItems(List<OfferItem> unavailableItems) {
+		this.unavailableItems = unavailableItems;
+	}
+
 	private OfferItem findItem(String productId) {
 		for (OfferItem item : availabeItems) {
 			if (item.getProductId().equals(productId))
 				return item;
 		}
 		return null;
+	}
+
+	public void setAvailabeItems(List<OfferItem> availabeItems2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

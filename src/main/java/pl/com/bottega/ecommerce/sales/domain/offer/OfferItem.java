@@ -110,6 +110,10 @@ public class OfferItem {
 		this.totalCost = productPrice.multiply(new BigDecimal(quantity)).subtract(discountValue);
 	}
 
+	public OfferItem() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getProductId() {
 		return productId;
 	}
