@@ -14,8 +14,6 @@ public class Offer {
         this.unavailableItems = unavailableItems;
     }
 
-    public Offer() {};
-
     public List<OfferItem> getAvailabeItems() {
         return availableItems;
     }
@@ -79,9 +77,6 @@ public class Offer {
         return true;
     }
 
-    public void setUnavailableItems(List<OfferItem> unavailableItems) {
-        this.unavailableItems = unavailableItems;
-    }
 
     private OfferItem findItem(String productId) {
         for (OfferItem item : availableItems) {
@@ -91,9 +86,13 @@ public class Offer {
         }
         return null;
     }
-
-    public void setAvailableItems(List<OfferItem> availableItems) {
-        this.availableItems = availableItems;
+    
+    public void addAvailableItem(OfferItem offerItem) {
+    	availableItems.add(offerItem);
+    }
+    
+    public void addUnavailableItem(OfferItem offerItem) {
+    	availableItems.add(offerItem);
     }
 
 }
