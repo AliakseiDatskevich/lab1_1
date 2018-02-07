@@ -111,16 +111,16 @@ public class Offer {
 	}
 
 	public void printAvailableItems() {
-    	if (availableItems.isEmpty() != false) {
-    		for (int i = 0; i < availableItems.size(); i++)
-    			System.out.println(availableItems.get(i).toString());
-    	}
-    }
-	
+		if (availableItems.isEmpty() != false) {
+			for (int i = 0; i < availableItems.size(); i++)
+				System.out.println(availableItems.get(i).toString());
+		}
+	}
+
 	public void printUnvailableItems() {
-    	if (availableItems.isEmpty() != false) {
-    		for (int i = 0; i < unavailableItems.size(); i++)
-    			System.out.println(unavailableItems.get(i).toString());
-    	}
-    }
+		if (availableItems.isEmpty() != false) {
+			for (int i = 0; i < unavailableItems.size(); i++)
+				System.out.println(unavailableItems.get(i).toString());
+		}
+	}
 }
