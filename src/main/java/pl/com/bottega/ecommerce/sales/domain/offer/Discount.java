@@ -1,49 +1,50 @@
 package pl.com.bottega.ecommerce.sales.domain.offer;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
-public class Discount extends OfferItem {
-	
-	private String discountCause;
+public class Discount {
 
-	private BigDecimal discount;
-	
-	private String currency;
-	
-	
-	public Discount(String productId, BigDecimal productPrice, String productName, Date productSnapshotDate,
-			String productType, int quantity) {
-		super(productId, productPrice, productName, productSnapshotDate, productType, quantity);
-		// TODO Auto-generated constructor stub
-	}
+    public Discount(String discountCause, BigDecimal discount, String currency) {
+        super();
+        this.discountCause = discountCause;
+        this.discount = discount;
+        this.currency = currency;
+    }
 
-	public String getCurrency() {
-		return currency;
-	}
+    public Discount() {}
 
-	public void setCurrency(String currency) {
-		this.currency = currency;
-	}
-	
-	public String getTotalCostCurrency() {
-		return currency;
-	}
-	
-	public BigDecimal getDiscount() {
-		return discount;
-	}
-	
-	public String getDiscountCause() {
-		return discountCause;
-	}
-	
-	public void setDiscountCause(String discountCause) {
-		this.discountCause = discountCause;
-	}
+    private String discountCause;
 
-	public void setDiscount(BigDecimal discount) {
-		this.discount = discount;
-	}
+    public BigDecimal discount;
+
+    private String currency;
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getTotalCostCurrency() {
+        return currency;
+    }
+
+    public BigDecimal getDiscount() {
+        return discount;
+    }
+
+    public String getDiscountCause() {
+        return discountCause;
+    }
+
+    public void setDiscountCause(String discountCause) {
+        this.discountCause = discountCause;
+    }
+
+    public void setDiscount(BigDecimal discount) {
+        this.discount = discount;
+    }
 
 }
